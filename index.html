@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль - ignatoff</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="gradient-orb orb1"></div>
+        <div class="gradient-orb orb2"></div>
+        <div class="gradient-orb orb3"></div>
+    </div>
+    
+    <div class="container">
+        <div class="profile-card">
+            <div class="card-glow"></div>
+            
+            <div class="avatar-section">
+                <div class="avatar">
+                    <div class="avatar-circle">
+                        <span class="avatar-text">И</span>
+                        <div class="avatar-ring"></div>
+                        <div class="avatar-ring ring-2"></div>
+                    </div>
+                    <div class="status-indicator"></div>
+                </div>
+                <div class="sparkles">
+                    <i class="fas fa-sparkles sparkle sparkle-1"></i>
+                    <i class="fas fa-sparkles sparkle sparkle-2"></i>
+                    <i class="fas fa-sparkles sparkle sparkle-3"></i>
+                </div>
+            </div>
+            
+            <div class="profile-info">
+                <div class="name-section">
+                    <h1 class="nickname">
+                        <span class="text-reveal">ignatoff</span>
+                        <div class="verified-badge">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </h1>
+                    <h2 class="real-name">
+                        <span class="text-reveal">Ярослав</span>
+                    </h2>
+                    <div class="role-tag">
+                        <i class="fas fa-code"></i>
+                        <span>Developer</span>
+                    </div>
+                </div>
+                
+                <div class="stats-section">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="1">0</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="0">0</div>
+                        <div class="stat-label">Years Coding</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Plugins</div>
+                    </div>
+                </div>
+                
+                <div class="skills">
+                    <div class="skill-icon java" data-skill="Java">
+                        <i class="fab fa-java"></i>
+                        <span>Java</span>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-progress="50"></div>
+                        </div>
+                    </div>
+                    <div class="skill-icon html" data-skill="HTML">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-progress="25"></div>
+                        </div>
+                    </div>
+                    <div class="skill-icon css" data-skill="CSS">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-progress="25"></div>
+                        </div>
+                    </div>
+                    <div class="skill-icon js" data-skill="JavaScript">
+                        <i class="fab fa-js-square"></i>
+                        <span>JS</span>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-progress="10"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="description-btn primary-btn" id="descriptionBtn">
+                        <i class="fas fa-user"></i>
+                        <span>О себе</span>
+                        <div class="btn-particles"></div>
+                    </button>
+                    <button class="contact-btn secondary-btn" id="contactBtn">
+                        <i class="fas fa-envelope"></i>
+                        <span>Контакты</span>
+                    </button>
+                </div>
+                
+                <div class="social-links">
+					<a href="https://github.com/ignatoffix" class="social-link github" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://discord.gg/5E5HUhbjrZ" class="social-link discord" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="https://t.me/ignatoff_dev" class="social-link telegram" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="floating-elements">
+                <div class="code-symbol">{'{'}</div>
+                <div class="code-symbol">{'}'}</div>
+                <div class="code-symbol">&lt;/&gt;</div>
+                <div class="minecraft-block">⬛</div>
+                <div class="ai-icon">🤖</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Модальное окно "О себе" -->
+    <div class="modal" id="aboutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-user-circle"></i> О себе</h3>
+                <span class="close" id="closeAboutModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="about-section">
+                    <div class="about-item">
+                        <i class="fas fa-heart"></i>
+                        <div>
+                            <h4>Вайб кодинг</h4>
+                            <p>Создаю код с душой и атмосферой, каждый проект - это маленькое произведение искусства</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <i class="fas fa-cubes"></i>
+                        <div>
+                            <h4>Майнкрафт разработка</h4>
+                            <p>Пишу плагины и моды для майнкрафт, используя возможности ИИ для создания уникального контента</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h4>Веб-разработка</h4>
+                            <p>Создаю современные и интерактивные сайты с красивыми анимациями и пользовательским интерфейсом ( Без AI )</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <i class="fas fa-robot"></i>
+                        <div>
+                            <h4>ИИ в разработке</h4>
+                            <p>Активно использую искусственный интеллект как помощника в создании инновационных решений</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Модальное окно "Контакты" -->
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-address-book"></i> Контакты</h3>
+                <span class="close" id="closeContactModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fab fa-discord"></i>
+                        <div>
+                            <span class="contact-label">Discord</span>
+                            <span class="contact-value">yariksouless</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-telegram"></i>
+                        <div>
+                            <span class="contact-label">Telegram</span>
+                            <span class="contact-value">@ignatoffix</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">github.com/ignatoffix</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">ignatoff.dev@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
